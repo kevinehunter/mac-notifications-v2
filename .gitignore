@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+
+# Coverage
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.pytest_cache/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Project specific
+*.db
+*.db-journal
+*.log
+*.pid
+notifications.db
+notifications_*.db
+data/logs/*
+data/backups/*
+!data/logs/.gitkeep
+!data/backups/.gitkeep
+
+# Local config
+.env
+.env.local
+
+# Temporary
+*.tmp
+*.bak
+*.old
+test_*.db
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Old/legacy files
+notification_daemon.py
+notification_mcp_server.py
+notification_daemon_*.py
+notification_mcp_server_*.py
+*.pyc
+daemon.log
+daemon.pid
+capture_*.py
+test_*.py
+demo_*.py
+quick_*.py
+check_*.py
+monitor_*.py
+analyze_*.py
+show_*.py
+*.json
+*.html
+*.md
+!mac_notifications/**/*.md
+!REFACTORING/**/*.md
