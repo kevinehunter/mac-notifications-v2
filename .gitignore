@@ -6,8 +6,10 @@ __pycache__/
 .Python
 venv/
 env/
+ENV/
+.venv
 
-# Coverage
+# Test coverage
 htmlcov/
 .coverage
 .coverage.*
@@ -22,50 +24,27 @@ coverage.xml
 *.swo
 *~
 
-# Project specific
+# Project specific - only ignore database and log files
 *.db
 *.db-journal
-*.log
-*.pid
+daemon.log
+daemon.pid
 notifications.db
 notifications_*.db
-data/logs/*
-data/backups/*
-!data/logs/.gitkeep
-!data/backups/.gitkeep
+
+# Only ignore logs in data directory
+mac_notifications/data/logs/*.log
+mac_notifications/data/backups/*.db
 
 # Local config
 .env
 .env.local
 
-# Temporary
-*.tmp
-*.bak
-*.old
-test_*.db
-
 # OS
 .DS_Store
 Thumbs.db
 
-# Old/legacy files
-notification_daemon.py
-notification_mcp_server.py
-notification_daemon_*.py
-notification_mcp_server_*.py
-*.pyc
-daemon.log
-daemon.pid
-capture_*.py
-test_*.py
-demo_*.py
-quick_*.py
-check_*.py
-monitor_*.py
-analyze_*.py
-show_*.py
-*.json
-*.html
-*.md
-!mac_notifications/**/*.md
-!REFACTORING/**/*.md
+# Keep test files!
+!tests/
+!test_*.py
+!**/test_*.py
