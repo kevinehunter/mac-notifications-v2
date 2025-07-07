@@ -6,10 +6,8 @@ __pycache__/
 .Python
 venv/
 env/
-ENV/
-.venv
 
-# Test coverage
+# Coverage
 htmlcov/
 .coverage
 .coverage.*
@@ -24,27 +22,69 @@ coverage.xml
 *.swo
 *~
 
-# Project specific - only ignore database and log files
+# Logs and databases
+*.log
+*.pid
 *.db
 *.db-journal
-daemon.log
-daemon.pid
-notifications.db
-notifications_*.db
 
-# Only ignore logs in data directory
-mac_notifications/data/logs/*.log
-mac_notifications/data/backups/*.db
-
-# Local config
-.env
-.env.local
+# BUT keep test database fixtures
+!tests/fixtures/*.db
 
 # OS
 .DS_Store
 Thumbs.db
 
-# Keep test files!
-!tests/
-!test_*.py
-!**/test_*.py
+# Local config
+.env
+.env.local
+
+# Old scripts in root (not in packages)
+/test_*.py
+/demo_*.py
+/quick_*.py
+/check_*.py
+/monitor_*.py
+/analyze_*.py
+/show_*.py
+/capture_*.py
+/get_*.py
+/run_*.py
+/fix_*.py
+/cleanup_*.py
+/kill_*.py
+
+# Old daemon/server files in root
+/notification_daemon*.py
+/notification_mcp_server*.py
+
+# Generated files
+*.html
+*.json
+
+# Git setup scripts (one-time use)
+/git_*.sh
+/complete_git_setup.sh
+/check_git_config.sh
+/fix_git_repo.sh
+
+# Old shell scripts in root
+/start_*.sh
+/stop_*.sh
+/restart_*.sh
+/clean_*.sh
+/create_*.sh
+/setup.sh
+/migrate_*.sh
+/install_*.sh
+
+# Backup files
+*.bak
+*.old
+*.orig
+
+# Keep important project files
+!mac_notifications/**
+!REFACTORING/*.py
+!REFACTORING/*.sh
+!REFACTORING/*.md
